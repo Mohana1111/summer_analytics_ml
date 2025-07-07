@@ -1,5 +1,3 @@
-# Create the cleaned-up and escaped README.md content
-
 # 🅿️ Dynamic Urban Parking Price Prediction
 
 A real-time pricing engine and visualization system for urban parking spaces based on occupancy, demand, queue length, traffic, and special events. The goal is to optimize parking prices dynamically and reroute vehicles when lots are overburdened.
@@ -50,8 +48,6 @@ Normalize features as needed (scaling, encoding categorical variables)
 
 3. Model 1 – Baseline Linear Price Model
 
-Formula:
-Price_{t+1} = Price_t + α * (Occupancy / Capacity)
 
 4. Model 2 – Linear Demand-Based Price Model
 Formulas : 
