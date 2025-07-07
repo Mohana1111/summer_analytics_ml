@@ -50,8 +50,8 @@ Normalize features as needed (scaling, encoding categorical variables)
 
 
 4. Model 2 – Linear Demand-Based Price Model
-Formulas : 
-Demand = α * (Occupancy / Capacity) + β * QueueLength − γ * Traffic + δ * IsSpecialDay + ε * VehicleTypeWeight
+Formulas :
+-Demand = α * (Occupancy / Capacity) + β * QueueLength − γ * Traffic + δ * IsSpecialDay + ε * VehicleTypeWeight
 Price_t = BasePrice * (1 + λ * NormalizedDemand)
 
 5. Model 3 – Exponential Elastic Price Model
