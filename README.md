@@ -25,22 +25,9 @@ This project builds a **multi-model dynamic pricing system** for 14 urban parkin
 | Data Handling      | Pandas, NumPy                       |
 | Visualization      | Bokeh, Panel                        |
 | Geospatial Calc    | Geopy                               |
-| Architecture Diagrams | Mermaid JS (GitHub Compatible)   |
 
 ---
 
-## 📐 Architecture Diagram
-graph TD
-    A[Raw Parking Data] --> B[Preprocessing & Feature Engineering]
-    B --> C1[Model 1: Baseline Linear Pricing]
-    B --> C2[Model 2: Linear Demand Pricing]
-    B --> C3[Model 3: Exponential Pricing]
-    C1 --> D[Price Output CSVs]
-    C2 --> D
-    C3 --> D
-    D --> E[Interactive Visualization via Bokeh]
-    E --> F[Competitor Comparison (Geopy)]
-    E --> G[User Dropdown for Lot Selection]
 
 1. Workflow & Architecture
 1.Data Preparation
