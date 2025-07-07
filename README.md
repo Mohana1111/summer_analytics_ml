@@ -1,5 +1,5 @@
 # Create the cleaned-up and escaped README.md content
-readme_content = """
+
 # 🅿️ Dynamic Urban Parking Price Prediction
 
 A real-time pricing engine and visualization system for urban parking spaces based on occupancy, demand, queue length, traffic, and special events. The goal is to optimize parking prices dynamically and reroute vehicles when lots are overburdened.
@@ -30,8 +30,6 @@ This project builds a **multi-model dynamic pricing system** for 14 urban parkin
 ---
 
 ## 📐 Architecture Diagram
-
-```mermaid
 graph TD
     A[Raw Parking Data] --> B[Preprocessing & Feature Engineering]
     B --> C1[Model 1: Baseline Linear Pricing]
@@ -44,32 +42,43 @@ graph TD
     E --> F[Competitor Comparison (Geopy)]
     E --> G[User Dropdown for Lot Selection]
 
-## Workflow & Architecture
-### Step 1: Data Preparation
+1. Workflow & Architecture
+1.Data Preparation
+
 Original dataset contains:
 
--Latitude/Longitude of lots
+Latitude/Longitude of lots
 
--Occupancy, QueueLength, Capacity
+Occupancy, QueueLength, Capacity
 
--VehicleType, SpecialDay, TrafficConditionNearby
+VehicleType, SpecialDay, TrafficConditionNearby
 
--Timestamp: 04-10-2016, 07:59:00
+Timestamp (e.g., 04-10-2016, 07:59:00)
 
-We parse the time and normalize features as needed.
+2. Steps:
 
-## Step 2: Model 1 – Baseline Linear Price Model
+Parse the time into datetime objects
+
+Normalize features as needed (scaling, encoding categorical variables)
+
+3. Model 1 – Baseline Linear Price Model
+
+Formula:
 Price_{t+1} = Price_t + α * (Occupancy / Capacity)
 
-## Step 3: Model 2 – Linear Demand-Based Price Model
+4. Model 2 – Linear Demand-Based Price Model
+Formulas : 
 Demand = α * (Occupancy / Capacity) + β * QueueLength − γ * Traffic + δ * IsSpecialDay + ε * VehicleTypeWeight
 Price_t = BasePrice * (1 + λ * NormalizedDemand)
 
-## Step 4: Model 3 – Exponential Elastic Price Model
+5. Model 3 – Exponential Elastic Price Model
+
+Formula:
 Price = BasePrice * exp(λ * NormalizedDemand)
 
-##Step 5: Visualization with Bokeh
-Bokeh + Panel for interactive plots
+6. Visualization with Bokeh
+
+Interactive plots using Bokeh + Panel
 
 Dropdown to select parking lot
 
